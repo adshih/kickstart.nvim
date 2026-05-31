@@ -391,10 +391,18 @@ do
     },
   }
 
+  vim.pack.add { gh 'https://github.com/catppuccin/nvim.git' }
+  require('catppuccin').setup {
+    background = {
+      light = 'latte',
+      dark = 'frappe'
+    }
+  }
+
   -- Load the colorscheme here.
   -- Like many other themes, this one has different styles, and you could load
   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  vim.cmd.colorscheme 'tokyonight-night'
+  vim.cmd.colorscheme 'catppuccin'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
