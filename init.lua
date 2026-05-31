@@ -391,7 +391,7 @@ do
     },
   }
 
-  vim.pack.add { gh 'https://github.com/catppuccin/nvim.git' }
+  vim.pack.add { gh 'catppuccin/nvim' }
   require('catppuccin').setup {
     background = {
       light = 'latte',
@@ -403,6 +403,10 @@ do
   -- Like many other themes, this one has different styles, and you could load
   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
   vim.cmd.colorscheme 'catppuccin'
+
+  -- Auto set background based on system theme.
+  -- vim.pack.add { gh 'f-person/auto-dark-mode.nvim' }
+  -- require('auto-dark-mode').setup()
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
