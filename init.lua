@@ -395,8 +395,8 @@ do
   require('catppuccin').setup {
     background = {
       light = 'latte',
-      dark = 'frappe'
-    }
+      dark = 'frappe',
+    },
   }
 
   -- Load the colorscheme here.
@@ -437,6 +437,11 @@ do
   -- - sd'   - [S]urround [D]elete [']quotes
   -- - sr)'  - [S]urround [R]eplace [)] [']
   require('mini.surround').setup()
+
+  require('mini.map').setup()
+  vim.keymap.set('n', '<Leader>mt', MiniMap.toggle, { desc = 'Toggle minimap' })
+
+  require('mini.pairs').setup()
 
   -- Simple and easy statusline.
   --  You could remove this setup call if you don't like it,
