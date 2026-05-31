@@ -458,6 +458,9 @@ do
 
   -- ... and there is more!
   --  Check out: https://github.com/nvim-mini/mini.nvim
+
+  vim.pack.add { gh 'stevearc/oil.nvim' }
+  require('oil').setup()
 end
 
 -- ============================================================
@@ -706,8 +709,9 @@ do
     -- clangd = {},
     -- gopls = {},
     -- pyright = {},
-    -- rust_analyzer = {},
-    --
+
+    rust_analyzer = {},
+
     -- Some languages (like typescript) have entire language plugins that can be useful:
     --    https://github.com/pmizio/typescript-tools.nvim
     --
