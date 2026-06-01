@@ -391,19 +391,6 @@ do
     },
   }
 
-  vim.pack.add { gh 'catppuccin/nvim' }
-  require('catppuccin').setup {
-    background = {
-      light = 'latte',
-      dark = 'frappe',
-    },
-  }
-
-  -- Load the colorscheme here.
-  -- Like many other themes, this one has different styles, and you could load
-  -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  vim.cmd.colorscheme 'catppuccin'
-
   -- Auto set background based on system theme.
   -- vim.pack.add { gh 'f-person/auto-dark-mode.nvim' }
   -- require('auto-dark-mode').setup()
@@ -458,15 +445,6 @@ do
 
   -- ... and there is more!
   --  Check out: https://github.com/nvim-mini/mini.nvim
-
-  vim.pack.add { gh 'stevearc/oil.nvim' }
-  require('oil').setup {
-    delete_to_trash = true,
-    view_options = {
-      show_hidden = true,
-    },
-  }
-  vim.keymap.set('n', '-', '<Cmd>Oil<CR>', { desc = 'Open parent directory' })
 end
 
 -- ============================================================
@@ -997,7 +975,8 @@ do
   -- NOTE: You can add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- require 'custom.plugins'
+
+  require 'custom.plugins'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
